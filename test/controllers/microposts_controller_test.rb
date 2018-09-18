@@ -11,7 +11,7 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_micropost_url
+    get microposts_url
     assert_response :success
   end
 
@@ -29,7 +29,7 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    get edit_micropost_url(@micropost)
+    get edit_polymorphic_url(@micropost)
     assert_response :success
   end
 
@@ -40,9 +40,10 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy micropost" do
     assert_difference('Micropost.count', -1) do
-      delete micropost_url(@micropost)
-    end
+    delete micropost_url(@micropost)
 
-    assert_redirected_to microposts_url
-  end
+   end
+
+     assert_redirected_to microposts_url(@micropost)
+ end
 end
