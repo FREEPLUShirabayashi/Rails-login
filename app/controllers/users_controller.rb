@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # 初めての登録時の時にウェルカムメッセージを表示させる
+      flash[:success] = "Welcome to the Sample App!"
+# 別のページにリダイレクトするという意味
+      redirect_to @user
       # 保存の成功をここで扱う。
     else
       render 'new'
