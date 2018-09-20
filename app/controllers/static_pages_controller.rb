@@ -1,6 +1,4 @@
 class StaticPagesController < ApplicationController
-  def root
-  end
   def home
   end
   def help
