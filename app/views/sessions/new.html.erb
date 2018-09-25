@@ -1,0 +1,29 @@
+<% provide(:title, "Log in") %>
+<!-- <div class="test"> -->
+<div class="wrap test">
+    <h1 style="color:white">ACCOUNT LOGIN</h1>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <!-- email -->
+      <div class="email">
+        <i class="fas fa-address-book"></i>
+        <!-- <label for="name">User name</label> -->
+        <!-- <input type="text" id="email" name="email" placeholder="Email"> -->
+        <label for="session_email">Email</label>
+        <%= f.email_field :email, id: 'session_email' %>
+      </div>
+       <!--  password-->
+      <div class="passwordbutton">
+        <i class="fas fa-unlock-alt"></i>
+      <!-- <label for="password">Password</label> -->
+      <!-- &nbsp;は空白を空けるもの -->
+      <!-- <input type="text" id="password" name="user_name"placeholder="Password"> -->
+      <label for="session_password">Password</label>
+      <%= f.password_field :password, id: 'session_password' %>
+     </div>
+     <!-- loginボタン -->
+      <%= f.submit "Log in", class: "login" %>
+      <p id="newuser">New user? <%= link_to "Sign up now!", signup_path %></p>
+    <% end %>
+
+</div>
+<!-- </div> -->

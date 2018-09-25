@@ -1,0 +1,118 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*  基本的に全てのbodyに書いたほうがいい */
+body{
+  /*  marginは外枠、paddingは余白のこと*/
+  margin: 0;
+  padding: 0;
+  display: -webkit-inline-box;
+  // .login{
+  //   /*  背景をグラデーションにする */
+  //   background: linear-gradient(-150deg, #FF3399,#663399);
+  //   /* 文字の色は白 */
+  //   color: white;
+  //   /* ボタンの角を丸くする */
+  //   border-radius: 20px;
+  //   /* 大きさの設定 */
+  //   width: 100px; height: 30px;
+  //   padding: 25px 50px 20px 80px;
+  // }
+}
+form{
+  input {
+     // inputされたものの線を全て消す */
+    border:none;
+  }
+  /*  formは暗くしない*/
+  position: absolute;
+   top: 0;
+   right: 0;
+  bottom: 0;
+   left: 0;
+
+  background-color: white;
+
+  width: 300px; height: 300px;
+  /* フォームのか角を丸くする */
+  border-radius: 10px;
+  /* 左右対象の場所（中央）にハイチする */
+  margin: auto;
+  .newuser{
+    font-size: 100%;
+    #session_email{
+      font-size: 100%;
+    }
+    #session_password{
+    font-size:100%;
+    }
+  }
+  .login{
+    /*  背景をグラデーションにする */
+    background: linear-gradient(-150deg, #FF3399,#663399);
+    /* 文字の色は白 */
+    color: white;
+    /* ボタンの角を丸くする */
+    border-radius: 20px;
+    /* 大きさの設定 */
+    width: 200px; height: 30px;
+    padding: 20px 80px 10px 40px;
+    font-size: 100%;
+  }
+  // input {
+    /* inputされたものの線を全て消す */
+    // border:none;
+  // }
+  .email{
+    /* 下に線を入れる　太さ、　１本　、 */
+    border-bottom: 1px solid #ccc;
+    /* 空白をどの程度空けるか 上、左、下、右の順*/
+    padding:10px 30px 10px 40px;
+  }
+  .passwordbutton{
+    border-bottom: 1px solid #ccc;
+    padding:10px 30px 10px 30px;
+  }
+}
+
+
+/* iのアイコン二つの右側を少し余白を空ける */
+i{
+  margin-right: 10px;
+}
+h1{
+  /* abusoluteじゃなくても良い
+  abusoluteにしたら文字が左側に移動してしまった
+  relativeを使って
+  マスクで文字がクロになったり、左側に行くのを防ぐ */
+  position: relative;
+  font-size: 100%;
+  /* 文字を左右のまん中にする */
+  text-align: center;
+  /* 上を空ける */
+  top: 190px;
+
+}
+.test{
+  margin: auto;
+  /*  urlを指定して背景画像を設定する*/
+  background-image: image-url('bg-01.jpg');
+  width:100vw; height:100vh;
+  background-size: cover;
+  position: relative;
+
+}
+/* 背景の前を指定する */
+.test::before{
+
+  /* 透過した黒を重ねる */
+background-color: rgba(0,0,0,0.5);
+/* どの範囲に重ねるかを指定 */
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+content: ' ';
+
+}
