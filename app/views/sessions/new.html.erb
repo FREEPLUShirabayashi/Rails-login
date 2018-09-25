@@ -20,6 +20,11 @@
       <label for="session_password">Password</label>
       <%= f.password_field :password, id: 'session_password' %>
      </div>
+     <!-- rimember me機能の追加 -->
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Remember me on this computer</span>
+      <% end %>
      <!-- loginボタン -->
       <%= f.submit "Log in", class: "login" %>
       <p id="newuser">New user? <%= link_to "Sign up now!", signup_path %></p>
