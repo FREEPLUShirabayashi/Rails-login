@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_105210) do
+ActiveRecord::Schema.define(version: 2018_09_27_172154) do
 
   create_table "microposts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_09_27_105210) do
     t.string "activation_digest"
     t.boolean "activated"
     t.string "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end
